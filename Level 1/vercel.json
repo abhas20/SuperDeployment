@@ -4,7 +4,15 @@
       { "src": "index.html", "use": "@vercel/static" }
     ],
     "routes": [
-      { "src": ".*", "dest": "/index.html" }
+      { "src": ".*", "dest": "/index.html" },
+      {
+        "src": "/styles/(.*)",
+        "dest": "/public/styles/$1"
+      },
+      {
+        "src": "/scripts/(.*)",
+        "dest": "/public/scripts/$1"
+      }
     ],
     "env": {
       "NODE_ENV": "production",
