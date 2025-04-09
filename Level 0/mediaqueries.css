@@ -1,3 +1,6 @@
+body{
+  background-color: antiquewhite;
+}
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -100,4 +103,7 @@
   .text-container {
     text-align: justify;
   }
+}
+#profile-pic{
+  border-radius: 50%;
 }
