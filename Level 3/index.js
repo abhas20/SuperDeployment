@@ -6,13 +6,14 @@ const app = express();
 app.use(express.json());
 dotenv.config();
 
-const db = new sqlite3.Database('./db/todos.db', (err) => {
+const db = new sqlite3.Database('/mnt/data/todos.db', (err) => {
     if (err) {
         console.error('Error connecting to database:', err.message);
     } else {
         console.log('Connected to SQLite database.');
     }
 });
+
 
 db.run(`CREATE TABLE IF NOT EXISTS todos (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
